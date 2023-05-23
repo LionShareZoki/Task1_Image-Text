@@ -1,0 +1,169 @@
+@media (min-width: 1440px) and (max-width: 1440px) {
+  html,
+  body {
+    margin: 0;
+    padding: 0;
+    font-family: "Fira Sans", sans-serif;
+    overflow: hidden;
+  }
+
+  .container {
+    display: flex;
+    width: 100vw;
+    background: #e3cfcf;
+  }
+
+  .box {
+    width: 50%;
+    display: block;
+  }
+
+  .box img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+
+  .box h1 {
+    font-weight: 275;
+
+    font-size: 32px;
+    line-height: 41.6px;
+    text-align: center;
+    width: 512px;
+    margin: 0 104px;
+    margin-top: 119.5px;
+    margin-bottom: 16px;
+  }
+
+  .box p {
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    width: 512px;
+    text-align: center;
+    margin: 0 104px;
+  }
+
+  .box button {
+    font-style: normal;
+    width: 170px;
+    height: 52px;
+    font-weight: 500;
+    font-size: 14px;
+    background: none;
+    padding: 0;
+    text-align: center;
+    border: 1px solid black;
+    margin-left: 275px;
+    margin-right: 275px;
+    margin-top: 24px;
+  }
+
+  .rectangle {
+    width: 512px;
+    height: 337px;
+  }
+
+  .hidden-text {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    margin-top: 50px;
+    transition: opacity 0.3s ease, max-height 0.3s ease;
+  }
+
+  .hidden-text.visible {
+    opacity: 1;
+    max-height: 200px;
+  }
+  .hidden-text-container {
+    margin-top: 16px;
+  }
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Fira Sans", sans-serif;
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  width: 100vw;
+  height: 100vw;
+  background: #e3cfcf;
+}
+
+.box {
+  width: 50%;
+  display: block;
+}
+
+.box img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center center;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.box h1 {
+  font-weight: 275;
+
+  font-size: 32px;
+  line-height: 41.6px;
+  text-align: center;
+  width: 512px;
+  margin: 0 104px;
+  margin-top: 119.5px;
+  margin-bottom: 16px;
+}
+
+.box p {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  width: 512px;
+  text-align: center;
+  margin: 0 104px;
+}
+
+.box button {
+  font-style: normal;
+  width: 170px;
+  height: 52px;
+  font-weight: 500;
+  font-size: 14px;
+  background: none;
+  padding: 0;
+  text-align: center;
+  border: 1px solid black;
+  margin-left: 275px;
+  margin-right: 275px;
+  margin-top: 24px;
+}
+
+.rectangle {
+  width: 512px;
+  height: 337px;
+}
+
+.hidden-text {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  margin-top: 50px;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+.hidden-text.visible {
+  opacity: 1;
+  max-height: 200px;
+}
+.hidden-text-container {
+  margin-top: 16px;
+}
