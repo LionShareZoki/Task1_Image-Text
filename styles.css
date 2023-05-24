@@ -19,75 +19,98 @@ body::-webkit-scrollbar {
 
 .box {
   width: 50%;
-  display: flex;
   justify-content: center;
   align-items: center;
+  display: flex;
 }
 
 .box img {
-  width: 100%;
-  height: auto;
-  object-fit: cover;
-  object-position: center center;
   max-width: 100%;
   max-height: 100%;
+  object-fit: contain;
 }
 
 .box h1 {
-  font-weight: 275;
-
-  font-size: 32px;
-  line-height: 41.6px;
   text-align: center;
+  font-size: 32px;
+  font-weight: 275;
+  line-height: 41.6px;
   width: 512px;
-  margin: 0 104px;
-  margin-top: 119.5px;
+  margin-left: 0;
+  margin-right: 0;
+  margin-top: 0;
   margin-bottom: 16px;
 }
 
 .box p {
-  font-style: normal;
-  font-weight: 300;
-  font-size: 18px;
   width: 512px;
-  text-align: center;
   margin: 0 104px;
+  margin-bottom: 24px;
+  font-size: 18px;
+  text-align: center;
+  line-height: 23.4px;
 }
 
 .box button {
-  font-style: normal;
+  font-size: 14px;
+  font-weight: 500;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  padding-left: 24px;
+  padding-right: 24px;
+  gap: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  border: 1px solid black;
+  background: none;
   width: 170px;
   height: 52px;
   font-weight: 500;
-  font-size: 14px;
-  background: none;
-  padding: 0;
-  text-align: center;
-  border: 1px solid black;
-  margin: 24px auto;
+  line-height: 130%;
+  box-sizing: border-box;
 }
 
 .rectangle {
-  margin: 10% 10%;
+  position: relative;
+  margin-top: 119.5px;
+  margin-bottom: 119.5px;
+  margin-left: 104px;
+  margin-right: 104px;
+  width: 512px;
+  height: 337px;
+  padding: 0;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
-  padding: 16px;
 }
 
 .hidden-text {
   opacity: 0;
   max-height: 0;
   overflow: hidden;
-  margin-top: 0; /* Remove the margin */
-  transition: opacity 0.5s ease;
+  margin-top: 0;
+  display: none;
 }
 
 .hidden-text.visible {
+  animation-name: fade-in;
+  animation-duration: 0.5s;
+  animation-timing-function: ease;
   opacity: 1;
+  display: block;
   max-height: 200px;
-  margin-top: 16px; /* Adjust the margin as needed */
+  margin-top: 16px;
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 
 @media (min-width: 1440px) and (max-width: 1440px) {
@@ -96,41 +119,6 @@ body::-webkit-scrollbar {
     margin: 0;
     padding: 0;
     font-family: "Fira Sans", sans-serif;
-  }
-
-  .container {
-    display: flex;
-    width: 100vw;
-    background: #e3cfcf;
-  }
-
-  .box {
-    width: 50%;
-    display: block;
-  }
-
-  .box img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-  }
-
-  .box h1 {
-    text-align: center;
-    font-size: 32px;
-    font-weight: 275;
-    line-height: 41.6px;
-    width: 512px;
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    margin-bottom: 16px;
-  }
-  .box p {
-    width: 512px;
-    margin: 0 104px;
-    margin-bottom: 24px;
-    font-size: 16px;
   }
 
   .box .toggle-button {
@@ -147,17 +135,6 @@ body::-webkit-scrollbar {
     margin-bottom: 0;
   }
 
-  .rectangle {
-    margin-top: 119.5px;
-    margin-bottom: 119.5px;
-    margin-left: 104px;
-    margin-right: 104px;
-    width: 512px;
-    height: 337px;
-    padding: 0;
-    justify-content: center;
-  }
-
   .hidden-text {
     margin-left: 0;
     margin-right: 0;
@@ -165,6 +142,7 @@ body::-webkit-scrollbar {
     max-height: 0;
     overflow: hidden;
     transition: opacity 0.3s ease, max-height 0.3s ease;
+    margin: 0;
   }
 
   .hidden-text.visible {
@@ -198,7 +176,7 @@ body::-webkit-scrollbar {
   .box h1 {
     font-size: 24px;
     font-weight: 275;
-    line-height: 31.2px;
+    line-height: 31px;
     width: 343px;
     margin-left: 0;
     margin-right: 0;
@@ -209,20 +187,22 @@ body::-webkit-scrollbar {
     margin: 0 16px;
     margin-bottom: 24px;
     font-size: 16px;
+    line-height: 130%;
+    font-weight: 300;
   }
 
   .box .toggle-button {
     font-size: 12px;
     font-weight: 500;
-    padding-top: 8px;
-    padding-bottom: 8px;
-    padding-left: 24px;
-    padding-right: 24px;
+    padding: 0;
     gap: 2px;
     margin-left: auto;
     margin-right: auto;
     margin-top: 0;
     margin-bottom: 0;
+    width: 110px;
+    height: 48px;
+    line-height: 16px;
   }
 
   .hidden-text-container {
@@ -231,6 +211,8 @@ body::-webkit-scrollbar {
 
   .rectangle {
     margin-top: 62.5px;
+    margin-left: 16px;
+    margin-right: 16px;
     width: 343px;
     height: 339px;
     padding: 0;
